@@ -3,8 +3,7 @@ import pandas as pd
 import plotly.express as px
 from prediction import render_prediction_page
 from explainability import render_explainability_page
-from chatbot import render_high_risk_explorer
-
+from chatbot import render_high_risk_explorer, render_executive_ai_assistant
 
 st.set_page_config(
     page_title="CardioIntel AI",
@@ -133,6 +132,7 @@ page = st.sidebar.radio(
         "🚨 High-Risk Patient Explorer",
         "🧠 Mortality AI Prediction",
         "🔍 Explainable AI Insights",
+        "🤖 Executive Clinical AI Assistant",
         "💡 Executive Recommendations"
     ]
 )
@@ -632,6 +632,9 @@ elif page == "🧠 Mortality AI Prediction":
 
 elif page == "🔍 Explainable AI Insights":
     render_explainability_page(filtered_df)
+
+elif page == "🤖 Executive Clinical AI Assistant":
+    render_executive_ai_assistant(filtered_df)
 # =========================
 # PAGE 6
 # =========================

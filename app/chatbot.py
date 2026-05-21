@@ -118,3 +118,120 @@ def render_high_risk_explorer(df):
         Earlier identification of this cohort supports ICU demand planning, bed management, and mortality risk reduction initiatives.
         """
     )
+
+def render_executive_ai_assistant(df):
+
+    st.subheader("🤖 Executive Clinical AI Assistant")
+    st.caption(
+        "AI-style executive assistant for interpreting cardiovascular risk, operations, biomarkers, and strategic recommendations."
+    )
+
+    st.markdown("---")
+
+    mortality_rate = df["DEATH_EVENT"].mean() * 100
+    readmission_rate = df["readmission_30d"].mean() * 100
+    icu_rate = df["icu_admission"].mean() * 100
+    avg_los = df["length_of_stay_days"].mean()
+    total_bed_days = df["length_of_stay_days"].sum()
+
+    high_risk_count = len(df[df["risk_category"].isin(["High", "Critical"])])
+    readmission_events = int(df["readmission_30d"].sum())
+
+    hospital_mortality = (
+        df.groupby("hospital_site")["DEATH_EVENT"]
+        .mean()
+        .sort_values(ascending=False) * 100
+    )
+
+    highest_hospital = hospital_mortality.index[0]
+    highest_hospital_rate = hospital_mortality.iloc[0]
+
+    st.markdown("### Ask an Executive Healthcare AI Question")
+
+    question = st.selectbox(
+        "Select a question",
+        [
+            "What is the overall cardiovascular risk profile?",
+            "Which hospital has the highest mortality burden?",
+            "How significant is the readmission burden?",
+            "What are the top biomarker priorities?",
+            "What executive actions should leadership take?",
+            "How can operational efficiency be improved?"
+        ]
+    )
+
+    st.markdown("### 🧠 AI Assistant Response")
+
+    if question == "What is the overall cardiovascular risk profile?":
+        st.info(
+            f"""
+            The current filtered cohort contains **{len(df):,} patients** with a mortality burden of 
+            **{mortality_rate:.2f}%**, ICU admission rate of **{icu_rate:.2f}%**, and average LOS of 
+            **{avg_los:.2f} days**.  
+
+            High and critical-risk patients account for **{high_risk_count:,} patients**, representing the key cohort for
+            AI-assisted surveillance and escalation planning.
+            """
+        )
+
+    elif question == "Which hospital has the highest mortality burden?":
+        st.warning(
+            f"""
+            **{highest_hospital}** has the highest observed mortality rate at **{highest_hospital_rate:.2f}%**.  
+
+            This site should be prioritized for review of escalation pathways, discharge planning, cardiovascular care
+            coordination, and high-risk patient monitoring workflows.
+            """
+        )
+
+    elif question == "How significant is the readmission burden?":
+        avoid_10 = int(readmission_events * 0.10)
+        avoid_15 = int(readmission_events * 0.15)
+
+        st.info(
+            f"""
+            The 30-day readmission rate is **{readmission_rate:.2f}%**, representing approximately 
+            **{readmission_events:,} repeat admissions**.  
+
+            A targeted 10–15% reduction strategy could prevent approximately **{avoid_10:,}–{avoid_15:,}**
+            repeat admissions.
+            """
+        )
+
+    elif question == "What are the top biomarker priorities?":
+        st.success(
+            """
+            The strongest clinical surveillance priorities are:
+
+            - **BNP** for ventricular stress and decompensation risk  
+            - **eGFR / serum creatinine** for cardio-renal deterioration  
+            - **serum sodium** for electrolyte instability and advanced HF risk  
+            - **troponin-I** for myocardial injury  
+            - **systolic BP and SpO2** for hemodynamic and oxygenation status
+            """
+        )
+
+    elif question == "What executive actions should leadership take?":
+        st.success(
+            f"""
+            Recommended leadership actions:
+
+            1. Prioritize surveillance for **{high_risk_count:,} high/critical-risk patients**.  
+            2. Implement readmission reduction pathways targeting **{readmission_rate:.2f}%** readmission burden.  
+            3. Deploy biomarker-triggered escalation protocols using BNP, eGFR, sodium, troponin, and BP.  
+            4. Benchmark high-mortality hospital sites for operational improvement.  
+            5. Integrate explainable AI outputs into clinical review workflows.
+            """
+        )
+
+    elif question == "How can operational efficiency be improved?":
+        released_bed_days = int(len(df) * 0.5)
+
+        st.info(
+            f"""
+            Current inpatient utilization is approximately **{int(total_bed_days):,} bed-days**.  
+
+            Reducing average LOS by just **0.5 days** across the cohort could release approximately 
+            **{released_bed_days:,} bed-days**, improving bed capacity, throughput, and operational resilience.
+            """
+        )

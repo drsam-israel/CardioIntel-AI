@@ -60,13 +60,9 @@ into a deployable healthcare technology solution designed for modern cardiovascu
 
 ---
 
-## 🚨 High-Risk Patient Explorer
-
 ![Explorer](screenshots/explore_1r.png)
 
 ---
-
-## 💡 Executive Recommendations
 
 ![Recommendations](screenshots/recommendations.png)
 
