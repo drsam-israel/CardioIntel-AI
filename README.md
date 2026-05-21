@@ -6,7 +6,15 @@
 ![Explainable AI](https://img.shields.io/badge/Explainable-AI-orange?style=for-the-badge)
 ![SHAP](https://img.shields.io/badge/SHAP-XAI-black?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge) 
+![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)
+
+## 🌍 Live Executive Healthcare AI Platform
+
+### 🔗 Live Demo
+[Launch CardioIntel AI](https://cardiointel-ai-8hvwda5isaw3auxwfkznni.streamlit.app/)
+
+### 💻 GitHub Repository
+[View Source Code](https://github.com/drsam-israel/CardioIntel-AI)
 ## Executive Cardiovascular Intelligence & Explainable Healthcare AI Platform
 
 An enterprise-grade Healthcare AI platform developed for cardiovascular risk intelligence, operational analytics, mortality prediction, explainable AI, and executive decision support.
