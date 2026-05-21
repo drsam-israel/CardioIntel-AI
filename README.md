@@ -15,6 +15,7 @@
 
 ### 💻 GitHub Repository
 [View Source Code](https://github.com/drsam-israel/CardioIntel-AI)
+
 ## Executive Cardiovascular Intelligence & Explainable Healthcare AI Platform
 
 An enterprise-grade Healthcare AI platform developed for cardiovascular risk intelligence, operational analytics, mortality prediction, explainable AI, and executive decision support.
@@ -35,6 +36,39 @@ into a deployable healthcare technology solution designed for modern cardiovascu
 ---
 
 # 🚀 Platform Capabilities
+
+# 📸 Platform Screenshots
+
+## 🏥 Executive Intelligence Dashboard
+
+![Dashboard](screenshots/dashboard_1.png)
+
+![Dashboard](screenshots/dashboard_2.png)
+
+---
+
+## 🧠 AI Mortality Prediction Engine
+
+![Prediction](screenshots/prediction_1.png)
+
+![Prediction](screenshots/prediction_2.png)
+---
+
+## 🔍 Explainable AI Insights
+
+![SHAP](screenshots/shap_1.png)
+
+---
+
+## 🚨 High-Risk Patient Explorer
+
+![Explorer](screenshots/explore_1r.png)
+
+---
+
+## 💡 Executive Recommendations
+
+![Recommendations](screenshots/recommendations.png)
 
 ## ✅ Executive Intelligence Dashboard
 
@@ -324,7 +358,7 @@ This platform incorporates foundational responsible Healthcare AI principles:
 - Executive accountability
 - Risk-aware analytics
 
-The project uses synthetic clinical data strictly for educational, research, and portfolio demonstration purposes.
+The project is strictly for educational, research, and portfolio demonstration purposes.
 
 ---
 
