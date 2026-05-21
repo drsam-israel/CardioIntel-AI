@@ -1,4 +1,12 @@
-# 🫀 CardioIntel AI  
+# 🫀 CardioIntel AI 
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-red?style=for-the-badge&logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-green?style=for-the-badge)
+![Healthcare AI](https://img.shields.io/badge/Healthcare-AI-purple?style=for-the-badge)
+![Explainable AI](https://img.shields.io/badge/Explainable-AI-orange?style=for-the-badge)
+![SHAP](https://img.shields.io/badge/SHAP-XAI-black?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge) 
 ## Executive Cardiovascular Intelligence & Explainable Healthcare AI Platform
 
 An enterprise-grade Healthcare AI platform developed for cardiovascular risk intelligence, operational analytics, mortality prediction, explainable AI, and executive decision support.
