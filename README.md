@@ -66,6 +66,25 @@ into a deployable healthcare technology solution designed for modern cardiovascu
 
 ![Recommendations](screenshots/recommendations.png)
 
+
+# 🏗️ System Architecture
+
+```text
+Clinical Data
+      ↓
+Data Processing & Feature Engineering
+      ↓
+Machine Learning Models
+(Logistic Regression / Random Forest)
+      ↓
+Explainable AI (SHAP)
+      ↓
+Executive Intelligence Layer
+      ↓
+Streamlit Interactive Dashboard
+      ↓
+Executive Decision Support
+
 ## ✅ Executive Intelligence Dashboard
 
 Interactive executive command center for:
